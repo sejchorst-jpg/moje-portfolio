@@ -10,9 +10,16 @@
   <body>
     <nav>
       <div class="logo">
-        <img src="logo-portfolio.jpeg" alt="Moje Logo" class="logo-img" />
+        <img src="logo-portfolio.jpeg" alt="Logo" class="logo-img" />
       </div>
-      <ul>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
         <li><a href="#about">O mnie</a></li>
         <li><a href="#skills">Skille</a></li>
         <li><a href="#projects">Projekty</a></li>
@@ -45,8 +52,11 @@
       <h2>Moje Realizacje</h2>
       <div class="projects-container">
         <div class="project-card">
-          <h3>Kalkulator Rodzinny</h3>
-          <p>Narzędzie do szybkich obliczeń domowych z bezpiecznym dostępem.</p>
+          <h3>Kalkulator kosztów budlowlanych</h3>
+          <p>
+            Narzędzie do szybkich obliczeń kosztów budowlanych. Prosta strona
+            zbudowana dla architektów i inwestorów.
+          </p>
           <span class="tech-stack">HTML • JS • CSS</span>
         </div>
         <div class="project-card">
@@ -56,5 +66,6 @@
         </div>
       </div>
     </section>
+    <script src="script.js"></script>
   </body>
 </html>

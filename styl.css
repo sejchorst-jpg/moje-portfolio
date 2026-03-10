@@ -6,7 +6,12 @@
   --accent-purple: #7e22ce;
   --accent-blue: #38bdf8;
   --text-main: #e2e8f0;
-  --nav-bg: rgba(15, 23, 42, 0.95);
+  --nav-bg: rgba(
+    15,
+    23,
+    42,
+    0.98
+  ); /* Bardzo ciemny granat z lekkim prześwitem */
 }
 
 body {
@@ -17,23 +22,22 @@ body {
   padding: 0;
   scroll-behavior: smooth;
   line-height: 1.6;
+  overflow-x: hidden; /* Zapobiega przesuwaniu strony na boki przez menu */
 }
 
-/* --- NAWIGACJA --- */
+/* --- NAWIGACJA GŁÓWNA --- */
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 5%;
-  background: var(--nav-bg);
-  backdrop-filter: blur(10px);
+  padding: 20px 5%;
   box-sizing: border-box;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  border-bottom: 1px solid #1e293b;
+  z-index: 2000;
+  /* Pasek jest przezroczysty, dopóki nie otworzysz menu */
 }
 
 .logo {
@@ -52,35 +56,86 @@ nav {
   transform: scale(1.1);
 }
 
-nav ul {
+/* --- HAMBURGER --- */
+.hamburger {
   display: flex;
-  list-style: none;
-  gap: 30px;
-  margin: 0;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 2100; /* Wyżej niż panel boczny */
 }
 
-nav a {
-  color: #94a3b8;
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: var(--accent-blue);
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+
+/* --- MENU BOCZNE (OVERLAY) --- */
+.nav-links {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Schowane za ekranem */
+  width: 100%;
+  max-width: 350px;
+  height: 100vh;
+  background: var(--nav-bg);
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 1500;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid var(--accent-purple);
+}
+
+.nav-links.active {
+  right: 0; /* Wysuwa się */
+}
+
+.nav-links li a {
+  font-size: 1.8rem;
+  color: white;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 700;
+  text-transform: uppercase;
   transition: 0.3s;
 }
 
-nav a:hover {
+.nav-links li a:hover {
   color: var(--accent-purple);
-  text-shadow: 0 0 10px var(--accent-purple);
+  letter-spacing: 2px;
+}
+
+/* --- ANIMACJA HAMBURGERA W KRZYŻYK --- */
+.hamburger.toggle span:nth-child(1) {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.hamburger.toggle span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.toggle span:nth-child(3) {
+  transform: rotate(45deg) translate(-6px, -7px);
 }
 
 /* --- HERO SECTION --- */
 header {
-  height: 70vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   background: radial-gradient(circle at center, #1e1b4b 0%, #000000 100%);
-  padding-top: 60px;
+  padding-top: 80px; /* Miejsce na przypięty nav */
 }
 
 h1 {
