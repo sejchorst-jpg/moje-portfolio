@@ -6,12 +6,7 @@
   --accent-purple: #7e22ce;
   --accent-blue: #38bdf8;
   --text-main: #e2e8f0;
-  --nav-bg: rgba(
-    15,
-    23,
-    42,
-    0.98
-  ); /* Bardzo ciemny granat z lekkim prześwitem */
+  --nav-bg: rgba(15, 23, 42, 0.95);
 }
 
 body {
@@ -22,10 +17,10 @@ body {
   padding: 0;
   scroll-behavior: smooth;
   line-height: 1.6;
-  overflow-x: hidden; /* Zapobiega przesuwaniu strony na boki przez menu */
+  overflow-x: hidden;
 }
 
-/* --- NAWIGACJA GŁÓWNA --- */
+/* --- NAWIGACJA (NAV) --- */
 nav {
   position: fixed;
   top: 0;
@@ -34,10 +29,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5%;
+  padding: 15px 5%;
   box-sizing: border-box;
   z-index: 2000;
-  /* Pasek jest przezroczysty, dopóki nie otworzysz menu */
+  background: transparent;
 }
 
 .logo {
@@ -56,13 +51,13 @@ nav {
   transform: scale(1.1);
 }
 
-/* --- HAMBURGER --- */
+/* --- HAMBURGER & MENU --- */
 .hamburger {
   display: flex;
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
-  z-index: 2100; /* Wyżej niż panel boczny */
+  z-index: 2100;
 }
 
 .hamburger span {
@@ -74,11 +69,10 @@ nav {
   transition: 0.3s ease;
 }
 
-/* --- MENU BOCZNE (OVERLAY) --- */
 .nav-links {
   position: fixed;
   top: 0;
-  right: -100%; /* Schowane za ekranem */
+  right: -100%;
   width: 100%;
   max-width: 350px;
   height: 100vh;
@@ -98,7 +92,7 @@ nav {
 }
 
 .nav-links.active {
-  right: 0; /* Wysuwa się */
+  right: 0;
 }
 
 .nav-links li a {
@@ -115,7 +109,7 @@ nav {
   letter-spacing: 2px;
 }
 
-/* --- ANIMACJA HAMBURGERA W KRZYŻYK --- */
+/* Animacja X */
 .hamburger.toggle span:nth-child(1) {
   transform: rotate(-45deg) translate(-6px, 6px);
 }
@@ -128,14 +122,14 @@ nav {
 
 /* --- HERO SECTION --- */
 header {
-  height: 75vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   background: radial-gradient(circle at center, #1e1b4b 0%, #000000 100%);
-  padding-top: 80px; /* Miejsce na przypięty nav */
+  padding-top: 60px;
 }
 
 h1 {
@@ -153,6 +147,19 @@ h1 {
   font-size: 1.2rem;
   color: #94a3b8;
   margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  margin: 0 15px;
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--accent-purple);
 }
 
 /* --- SEKCJE OGÓLNE --- */
@@ -169,7 +176,52 @@ h2 {
   margin-bottom: 40px;
 }
 
-/* --- SKILLE --- */
+/* --- NOWE: STYLE DLA O MNIE (ABOUT) --- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-description p {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+.about-description strong {
+  color: var(--accent-blue);
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.stat-card {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #1e293b;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  border-color: var(--accent-purple);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* --- SKILLE & PROJEKTY --- */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -193,7 +245,6 @@ h2 {
   box-shadow: 0 5px 15px rgba(126, 34, 206, 0.4);
 }
 
-/* --- PROJEKTY --- */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -225,5 +276,15 @@ h2 {
   font-size: 0.8rem;
   color: var(--accent-purple);
   font-weight: bold;
-  letter-spacing: 1px;
+}
+
+/* --- RESPONSYWNOŚĆ --- */
+@media (max-width: 768px) {
+  .about-grid,
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 2.8rem;
+  }
 }
