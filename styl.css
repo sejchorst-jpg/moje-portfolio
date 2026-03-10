@@ -154,11 +154,10 @@ h1 {
 }
 
 .logo-img {
-  height: 40px; /* Ustawia stałą wysokość */
-  width: 40px; /* Ustawia stałą szerokość, robiąc kwadrat */
-  object-fit: cover; /* Zapobiega rozciąganiu obrazka */
-  border-radius: 8px; /* Opcjonalnie: lekko zaokrąglone rogi, żeby wyglądało pro */
-  vertical-align: middle;
+  height: 40px !important; /* !important wymusza ten rozmiar */
+  width: auto;
+  max-width: 150px;
+  display: inline-block;
 }
 
 .logo {
