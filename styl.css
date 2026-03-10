@@ -1,169 +1,174 @@
-/* Podstawowe ustawienia */
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #1a1a1a; /* Ciemne tło */
-  color: #f4f4f4; /* Jasny tekst */
-  line-height: 1.6;
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap");
 
-header {
-  text-align: center;
-  margin-bottom: 50px;
-  border-bottom: 2px solid #333;
-  width: 100%;
-  max-width: 800px;
+:root {
+  --bg-black: #000000;
+  --bg-navy: #0f172a;
+  --accent-purple: #7e22ce;
+  --accent-blue: #38bdf8;
+  --text-main: #e2e8f0;
+  --nav-bg: rgba(15, 23, 42, 0.95);
 }
-
-h1 {
-  color: #7e22ce; /* Ładny turkusowy kolor */
-  margin-bottom: 0;
-}
-
-section {
-  max-width: 800px;
-  width: 100%;
-  margin-bottom: 30px;
-}
-
-/* Wygląd kart projektów */
-.project-card {
-  background: #252525;
-  padding: 20px;
-  border-radius: 8px;
-  border-left: 5px solid #00adb5;
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: scale(1.02); /* Lekkie powiększenie po najechaniu */
-}
-
-a {
-  color: #00adb5;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Import nowoczesnej czcionki z Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: #000000; /* Bardzo ciemny granat */
-  color: #e2e8f0;
+  background-color: var(--bg-black);
+  color: var(--text-main);
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  line-height: 1.6;
 }
 
-/* Nawigacja */
+/* --- NAWIGACJA --- */
 nav {
-  width: 100%; /* Pasek zajmuje całą szerokość ekranu */
+  width: 100%;
   display: flex;
-  justify-content: space-between; /* Logo po lewej, menu po prawej */
+  justify-content: space-between;
   align-items: center;
-  padding: 20px 5%; /* 20px góra/dół, 5% marginesu bocznego dla oddechu */
-  background: #1e293b; /* Twój ciemny granatowy kolor */
-  box-sizing: border-box; /* Żeby padding nie rozpychał strony */
-  position: fixed; /* Opcjonalnie: pasek będzie zawsze na górze przy przewijaniu */
+  padding: 15px 5%;
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  box-sizing: border-box;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-nav a {
-  color: #94a3b8;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #7e22ce;
-}
-
-/* Hero Section */
-header {
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
-}
-
-h1 {
-  font-size: 3.5rem;
-  margin: 0;
-  background: linear-gradient(90deg, #38bdf8, #818cf8);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Skille */
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  padding: 20px;
-}
-
-.skill-badge {
-  background: #1e293b;
-  padding: 8px 16px;
-  border-radius: 20px;
-  border: 1px solid #334155;
-  font-size: 0.9rem;
-}
-
-/* Karty projektów */
-.projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 40px 10%;
-}
-
-.project-card {
-  background: #1e293b;
-  padding: 25px;
-  border-radius: 12px;
-  border: 1px solid #334155;
-  transition: 0.3s;
-}
-
-.project-card:hover {
-  border-color: #38bdf8;
-  transform: translateY(-5px);
-}
-
-.tech-stack {
-  font-size: 0.8rem;
-  color: #38bdf8;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.logo-img {
-  height: 40px !important; /* !important wymusza ten rozmiar */
-  width: auto;
-  max-width: 150px;
-  display: inline-block;
+  border-bottom: 1px solid #1e293b;
 }
 
 .logo {
   display: flex;
   align-items: center;
+}
+
+.logo-img {
+  height: 45px !important;
+  width: auto;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+}
+
+nav a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 400;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--accent-purple);
+  text-shadow: 0 0 10px var(--accent-purple);
+}
+
+/* --- HERO SECTION --- */
+header {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle at center, #1e1b4b 0%, #000000 100%);
+  padding-top: 60px;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 15px rgba(126, 34, 206, 0.3));
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-top: 10px;
+}
+
+/* --- SEKCJE OGÓLNE --- */
+section {
+  width: 100%;
+  padding: 80px 10%;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 2rem;
+  border-left: 4px solid var(--accent-purple);
+  padding-left: 15px;
+  margin-bottom: 40px;
+}
+
+/* --- SKILLE --- */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skill-badge {
+  background: #111827;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+  color: var(--accent-blue);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.skill-badge:hover {
+  background: var(--accent-purple);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(126, 34, 206, 0.4);
+}
+
+/* --- PROJEKTY --- */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: #0f172a;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+  transition: 0.4s;
+}
+
+.project-card:hover {
+  border-color: var(--accent-purple);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.project-card h3 {
+  color: var(--accent-blue);
+  margin-top: 0;
+}
+
+.tech-stack {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.8rem;
+  color: var(--accent-purple);
+  font-weight: bold;
+  letter-spacing: 1px;
 }
