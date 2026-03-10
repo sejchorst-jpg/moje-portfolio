@@ -154,7 +154,14 @@ h1 {
 }
 
 .logo-img {
-  height: 40px; /* Dostosuj wysokość do paska nawigacji */
-  width: auto;
-  display: block;
+  height: 40px; /* Ustawia stałą wysokość */
+  width: 40px; /* Ustawia stałą szerokość, robiąc kwadrat */
+  object-fit: cover; /* Zapobiega rozciąganiu obrazka */
+  border-radius: 8px; /* Opcjonalnie: lekko zaokrąglone rogi, żeby wyglądało pro */
+  vertical-align: middle;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
 }
