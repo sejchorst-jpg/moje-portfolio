@@ -152,3 +152,9 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
+.logo-img {
+  height: 40px; /* Dostosuj wysokość do paska nawigacji */
+  width: auto;
+  display: block;
+}
