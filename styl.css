@@ -1,0 +1,153 @@
+/* Podstawowe ustawienia */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1a1a1a; /* Ciemne tło */
+  color: #f4f4f4; /* Jasny tekst */
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 50px;
+  border-bottom: 2px solid #333;
+  width: 100%;
+  max-width: 800px;
+}
+
+h1 {
+  color: #00adb5; /* Ładny turkusowy kolor */
+  margin-bottom: 0;
+}
+
+section {
+  max-width: 800px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* Wygląd kart projektów */
+.project-card {
+  background: #252525;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #00adb5;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.02); /* Lekkie powiększenie po najechaniu */
+}
+
+a {
+  color: #00adb5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Import nowoczesnej czcionki z Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #0f172a; /* Bardzo ciemny granat */
+  color: #e2e8f0;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Nawigacja */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(10px); /* Efekt rozmytego szkła */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* Hero Section */
+header {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Skille */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.skill-badge {
+  background: #1e293b;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #334155;
+  font-size: 0.9rem;
+}
+
+/* Karty projektów */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px 10%;
+}
+
+.project-card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  border-color: #38bdf8;
+  transform: translateY(-5px);
+}
+
+.tech-stack {
+  font-size: 0.8rem;
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

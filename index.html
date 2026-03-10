@@ -7,10 +7,51 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
+    <nav>
+      <div class="logo">SE</div>
+      <ul>
+        <li><a href="#about">O mnie</a></li>
+        <li><a href="#skills">Skille</a></li>
+        <li><a href="#projects">Projekty</a></li>
+      </ul>
+    </nav>
+
     <header>
-      <h1>My Portfolio</h1>
-      <h2>Software Developer & Designer</h2>
-      <h3>Szymon Ejchorst</h3>
+      <div class="hero">
+        <h1>Szymon Ejchorst</h1>
+        <p class="tagline">Uczę się tworzyć przyszłość w kodzie.</p>
+        <div class="social-links">
+          <a href="https://github.com/sejchorst-jpg" target="_blank">GitHub</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
     </header>
+
+    <section id="skills">
+      <h2>Czego używam</h2>
+      <div class="skills-grid">
+        <span class="skill-badge">HTML5</span>
+        <span class="skill-badge">CSS3</span>
+        <span class="skill-badge">JavaScript</span>
+        <span class="skill-badge">Git</span>
+        <span class="skill-badge">VS Code</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Moje Realizacje</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <h3>Kalkulator Rodzinny</h3>
+          <p>Narzędzie do szybkich obliczeń domowych z bezpiecznym dostępem.</p>
+          <span class="tech-stack">HTML • JS • CSS</span>
+        </div>
+        <div class="project-card">
+          <h3>To-Do List</h3>
+          <p>Prosta aplikacja do zarządzania zadaniami (wkrótce).</p>
+          <span class="tech-stack">JavaScript</span>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
