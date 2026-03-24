@@ -2,11 +2,11 @@
 
 :root {
   --bg-black: #000000;
-  --bg-navy: #0f172a;
-  --accent-purple: #7e22ce;
-  --accent-blue: #38bdf8;
-  --text-main: #e2e8f0;
-  --nav-bg: rgba(15, 23, 42, 0.95);
+  --bg-navy: #090e19;
+  --accent-purple: #6218a3;
+  --accent-blue: #0aa5eb;
+  --text-main: #cbd5e1;
+  --nav-bg: rgba(9, 14, 25, 0.95);
 }
 
 body {
@@ -128,7 +128,7 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: radial-gradient(circle at center, #1e1b4b 0%, #000000 100%);
+  background: radial-gradient(circle at center, #110f2b 0%, #000000 100%);
   padding-top: 60px;
 }
 
@@ -140,12 +140,12 @@ h1 {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 15px rgba(126, 34, 206, 0.3));
+  filter: drop-shadow(0 0 15px rgba(98, 24, 163, 0.3));
 }
 
 .tagline {
   font-size: 1.2rem;
-  color: #94a3b8;
+  color: #7587a1;
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -186,7 +186,7 @@ h2 {
 
 .about-description p {
   font-size: 1.1rem;
-  color: #94a3b8;
+  color: #7587a1;
   margin-bottom: 20px;
 }
 
@@ -201,10 +201,10 @@ h2 {
 }
 
 .stat-card {
-  background: #0f172a;
+  background: #090e19;
   padding: 20px;
   border-radius: 15px;
-  border: 1px solid #1e293b;
+  border: 1px solid #0f151e;
   text-align: center;
   transition: 0.3s;
 }
@@ -229,10 +229,10 @@ h2 {
 }
 
 .skill-badge {
-  background: #111827;
+  background: #090d15;
   padding: 10px 20px;
   border-radius: 12px;
-  border: 1px solid #1e293b;
+  border: 1px solid #0f151e;
   color: var(--accent-blue);
   font-weight: bold;
   transition: 0.3s;
@@ -242,7 +242,7 @@ h2 {
   background: var(--accent-purple);
   color: white;
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(126, 34, 206, 0.4);
+  box-shadow: 0 5px 15px rgba(98, 24, 163, 0.4);
 }
 
 .projects-container {
@@ -252,10 +252,10 @@ h2 {
 }
 
 .project-card {
-  background: #0f172a;
+  background: #090e19;
   padding: 30px;
   border-radius: 16px;
-  border: 1px solid #1e293b;
+  border: 1px solid #0f151e;
   transition: 0.4s;
 }
 
@@ -298,7 +298,7 @@ h2 {
 
 .contact-info p {
   font-size: 1.1rem;
-  color: #94a3b8;
+  color: #7587a1;
   margin-bottom: 20px;
 }
 
@@ -312,8 +312,8 @@ h2 {
 .input-group textarea {
   width: 100%;
   padding: 12px 15px;
-  background: #0f172a;
-  border: 1px solid #1e293b;
+  background: #090e19;
+  border: 1px solid #0f151e;
   border-radius: 8px;
   color: white;
   font-family: inherit;
@@ -325,7 +325,7 @@ h2 {
 .input-group textarea:focus {
   border-color: var(--accent-blue);
   outline: none;
-  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+  box-shadow: 0 0 10px rgba(10, 165, 235, 0.2);
 }
 
 .btn-submit {
@@ -342,7 +342,7 @@ h2 {
 
 .btn-submit:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(126, 34, 206, 0.4);
+  box-shadow: 0 5px 15px rgba(98, 24, 163, 0.4);
 }
 
 /* RWD */
