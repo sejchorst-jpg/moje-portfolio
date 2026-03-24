@@ -102,6 +102,9 @@ nav {
   font-weight: 700;
   text-transform: uppercase;
   transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .nav-links li a:hover {
