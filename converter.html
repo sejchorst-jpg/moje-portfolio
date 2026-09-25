@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konwerter Zdjęć | JPG do PNG</title>
+    <link rel="stylesheet" href="styl.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a
+          href="index.html"
+          style="
+            text-decoration: none;
+            color: white;
+            font-weight: 800;
+            font-size: 1.2rem;
+          "
+        >
+          &larr; POWRÓT
+        </a>
+      </div>
+      <!-- Menu hamburgerowe zachowane dla spójności stylów -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Strona Główna</a></li>
+      </ul>
+    </nav>
+
+    <section class="converter-section">
+      <div class="converter-container">
+        <h2>Konwerter <span>JPG do PNG</span></h2>
+        <p class="tagline">
+          Wgraj plik JPG, aby błyskawicznie zmienić go na format PNG.
+        </p>
+
+        <div class="converter-box">
+          <div class="upload-area" id="drop-zone">
+            <span class="stat-icon">📸</span>
+            <p>Przeciągnij zdjęcie lub kliknij, aby wybrać plik</p>
+            <input
+              type="file"
+              id="file-input"
+              accept="image/jpeg, image/jpg"
+              hidden
+            />
+            <button
+              class="btn-submit"
+              onclick="document.getElementById('file-input').click()"
+            >
+              Wybierz plik
+            </button>
+          </div>
+
+          <div id="preview-container" style="display: none">
+            <div class="preview-card">
+              <p>Podgląd pliku:</p>
+              <img id="image-preview" src="" alt="Podgląd" />
+              <p id="file-info" style="font-size: 0.8rem; color: #7587a1"></p>
+            </div>
+
+            <button id="convert-btn" class="btn-submit">
+              Konwertuj i pobierz PNG
+            </button>
+          </div>
+
+          <canvas id="canvas" style="display: none"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

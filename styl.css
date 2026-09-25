@@ -354,3 +354,65 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+/* --- STYLE DLA KONWERTERA --- */
+.converter-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #090e19 0%, #000000 100%);
+}
+
+.converter-container {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.converter-container h2 span {
+  color: var(--accent-blue);
+  border: none;
+}
+
+.converter-box {
+  background: #090e19;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid #0f151e;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.upload-area {
+  border: 2px dashed #1e293b;
+  padding: 40px;
+  border-radius: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.upload-area:hover {
+  border-color: var(--accent-blue);
+  background: rgba(10, 165, 235, 0.05);
+}
+
+.preview-card {
+  background: #000000;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--accent-purple);
+}
+
+#image-preview {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+#convert-btn {
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
